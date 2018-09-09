@@ -1,0 +1,128 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Basic Email Template
+	</title>
+
+	<!-- This is the part which makes the email template mobile responsive as well -->
+	<style type="text/css">
+		@media only screen and (max-width: 480px){
+			.main_wrapper{
+				max-width: 480px !important;
+			}
+			.logo_container{
+				margin: 3% 0 3% 0 !important;		
+			}
+			.logo{
+				width: 25% !important;
+				height: auto !important;
+			}
+			.banner{
+				height: 15% !important;
+			}
+		}
+	</style>
+</head>
+<body style="background:#ebebeb42;">
+
+	<!-- This is the main wrapper table in which the whole template fits -->
+	<table class="main_wrapper" align="center" border="0" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%; background: #FFFFFF">
+		<tr>
+			<td align="center"> 
+
+				<!-- The logo of the company will go here -->
+				<table class="logo_container" border="0" cellpadding="0" cellspacing="0" style="margin: 2% 0 2% 0;">
+					<tr>
+						<td align="center"> 
+							<img class="logo" align="center" src="C:\Users\hp\Desktop\Email template\Inages\your_logo_here.png" style="width: 35%; height: auto;">	
+						</td>
+					</tr>					
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+
+				<!-- This is area where the banner for email will go -->
+				<table class="banner_container" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td align="center"> 
+							<img class="banner" align="center" src="C:\Users\hp\Desktop\Email template\Inages\handshake.jpg" style="width: 100%; height: 20%">	
+						</td>
+					</tr>					
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="left">
+
+				<!-- The main content container, more information can also be added by adding more rows and for static content more p tags can be added -->
+				<table class="content_container" align="center" border="0" cellpadding="0" cellspacing="0" style="padding:4% 4% 4% 4%; width: 100%">
+					<tr>
+						<td style="text-align: left; font-size: 1em; font-family:Arial; line-height: 1.25em;">  
+							<p style="font-style: 1.25em; color: #3366D9; font-weight: bolder;">
+								Dear {{ name }},
+							</p>
+							<p>
+								My name is {{ ceo_name }} of {{ company_name }}. I want to congratulate on the 5 years of productive collaboration. The {{ company_name }} and I appreciate you and especially your trust. 
+							</p>
+							<p>
+								We are <span style="color:#3366D9; font-weight: bold"> HAPPY </span> to have been helpful all this time!
+							</p>
+							<p>
+								If you have any queries or concerns, please feel free to contact us at {{ support_email }} at any time. We are happy to help!
+							</p>
+							<p>
+								Regards,<br>
+								{{ ceo_name }}
+							</p>
+						</td>
+					</tr>					
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+
+				<!-- The footer of the email which may or may not include the social media handles -->
+				<table class="media_handle_container" border="0" cellspacing="0" cellpadding="0" width="100%" style="margin:2% 0 2% 0;">
+					<tr>
+						<td align="center">
+							<a href=" {{ facbook_handle }} ">
+								<img title="Facebook" src="https://tlr.stripocdn.email/content/assets/img/social-icons/logo-gray/facebook-logo-gray.png" style="width: 5%; height: auto; padding: 0 1% 0 0">
+							</a>
+							<a href=" {{ twitter_handle }} ">
+								<img src="https://tlr.stripocdn.email/content/assets/img/social-icons/logo-gray/twitter-logo-gray.png" style="width: 5%; height: auto; padding: 0 1% 0 1%">
+							</a>
+							<a href=" {{ instagram_handle }} ">
+								<img src="https://tlr.stripocdn.email/content/assets/img/social-icons/logo-gray/instagram-logo-gray.png" style="width: 5%; height: auto; padding: 0 0 0 1%">
+							</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+
+				<!-- Contact Us email will go in this region -->
+				<table class="contact_us_container" border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td align="center">
+							<p style="font-size: 1em; color:3366D9; font-weight: bold; margin: 0 0 0 0;">
+								<a href="mailto: {{ contact_us }}"> {{ contact_us }}</a>
+							</p>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+		<!-- More table rows can be added in case we require more information in the footer -->
+	</table>
+</body>
+</html>
